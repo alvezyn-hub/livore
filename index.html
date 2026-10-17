@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#414b3e"><meta name="description" content="Galeria Livore. Arte que faz a casa ser sua. Explore quadros e composições para transformar seus espaços.">
+  <title>Galeria Livore — Arte para habitar</title>
+  <link rel="stylesheet" href="styles.css"><script defer src="catalog.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header class="header">
+  <a class="brand" href="#" aria-label="Galeria Livore, início"><span>GALERIA</span>livore<span class="brand-dot">.</span></a>
+  <nav aria-label="Navegação principal"><a href="#catalogo">Quadros</a><a href="#colecoes">Coleções</a><a href="#ambientes">Por ambiente</a><a href="#sobre">A Livore</a></nav>
+  <div class="header-actions"><button class="icon-button" id="search-open" aria-label="Buscar quadros"></button><button class="icon-button" id="favorites-open" aria-label="Ver favoritos"></button><button class="bag-button" id="bag-open" aria-label="Abrir sacola"><span id="bag-icon"></span><span class="bag-label">Sacola</span><span class="count" id="bag-count">0</span></button><button class="icon-button menu-button" id="menu-open" aria-label="Abrir menu" aria-expanded="false">☰</button></div>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy"><p class="eyebrow">ARTE PARA HABITAR</p><h1 id="hero-title">Sua casa. <br>Seu olhar.<br><em>Sua galeria.</em></h1><p class="hero-description">Há uma obra que parece ter sido feita para você. <br>Encontre a sua e dê um novo sentido ao seu espaço.</p><a href="#catalogo" class="button">Encontre sua arte <span>↗</span></a><div class="hero-bottom"><span class="small-orbit">✳</span><p>Escolhas com intenção.<br><strong>Espaços com personalidade.</strong></p></div></div>
+    <div class="hero-scene photo-scene">
+      <img class="scene-photo" src="assets/rooms/sala-jardim.webp" width="1536" height="1024" alt="Folhas em Silêncio e Magnólias de Marfim em molduras naturais, acima de um sofá de linho claro" fetchpriority="high">
+      <div class="scene-label"><span>COLEÇÃO JARDIM INTERIOR</span><button data-product="111">Natureza para ficar por perto <span>↗</span></button></div>
+    </div>
+  </section>
+  <div class="manifesto-strip"><span>Uma parede. Infinitas possibilidades.</span><span>Natureza <i>✳</i> Luz <i>✳</i> Cor <i>✳</i> Novos olhares</span></div>
+  <section id="colecoes" class="section collections">
+    <div class="section-heading"><div><p class="eyebrow">CINCO JEITOS DE SENTIR</p><h2>Pequenas coleções.<br><em>Novos encontros.</em></h2></div><p>Quatorze obras, conectadas pela cor e pelo gesto.<br>Encontre a natureza que conversa com a sua casa.</p></div>
+    <div class="collection-grid">
+      <a href="#catalogo" class="collection" data-category="Costa Serena"><div class="collection-art collection-costa"><div class="collection-frame" data-art="104"></div><div class="collection-frame" data-art="105"></div></div><div><span class="collection-number">01 / COSTA SERENA</span><h3>Onde a pressa fica longe.</h3><p>Dunas, ondas e a luz que encontra o mar.</p><span class="collection-cta">Conhecer a coleção ↗</span></div></a>
+      <a href="#catalogo" class="collection" data-category="Jardim Interior"><div class="collection-art collection-jardim"><div class="collection-frame" data-art="101"></div><div class="collection-frame" data-art="102"></div></div><div><span class="collection-number">02 / JARDIM INTERIOR</span><h3>A vida em cada detalhe.</h3><p>Folhas e flores para trazer a natureza para perto.</p><span class="collection-cta">Conhecer a coleção ↗</span></div></a>
+      <a href="#catalogo" class="collection" data-category="Terra e Tempo"><div class="collection-art collection-terra"><div class="collection-frame" data-art="107"></div><div class="collection-frame" data-art="108"></div></div><div><span class="collection-number">03 / TERRA E TEMPO</span><h3>O que faz a gente ficar.</h3><p>Barro, raízes e o calor do entardecer.</p><span class="collection-cta">Conhecer a coleção ↗</span></div></a>
+      <a href="#catalogo" class="collection" data-category="Natureza Viva"><div class="collection-art collection-fauna"><div class="collection-frame" data-art="113"></div><div class="collection-frame" data-art="115"></div></div><div><span class="collection-number">04 / NATUREZA VIVA</span><h3>Um instante de vida.</h3><p>Carpas, aves e um cavalo entre água, céu e campo.</p><span class="collection-cta">Conhecer a coleção ↗</span></div></a>
+      <a href="#catalogo" class="collection" data-category="Ciclos de Luz"><div class="collection-art collection-ciclos"><div class="collection-frame" data-art="116"></div><div class="collection-frame" data-art="117"></div></div><div><span class="collection-number">05 / CICLOS DE LUZ</span><h3>O dia encontra a noite.</h3><p>Sol e lua, unidos pelos tons da terra.</p><span class="collection-cta">Conhecer a coleção ↗</span></div></a>
+    </div>
+  </section>
+  <section id="catalogo" class="section catalog"><div class="section-heading"><div><p class="eyebrow">ESCOLHAS PARA INSPIRAR</p><h2>Seu próximo encontro com a arte.</h2></div><span class="catalog-total" id="catalog-total"></span></div><div class="catalog-toolbar"><div class="filter-tabs" role="group" aria-label="Filtrar por coleção"><button data-filter="Todos" class="active">Todos os quadros</button><button data-filter="Costa Serena">Costa Serena</button><button data-filter="Jardim Interior">Jardim Interior</button><button data-filter="Terra e Tempo">Terra e Tempo</button><button data-filter="Natureza Viva">Natureza Viva</button><button data-filter="Ciclos de Luz">Ciclos de Luz</button><button data-filter="Conjuntos">Duplas</button></div><label class="sort-label"><span class="sr-only">Ordenar produtos</span><select id="sort"><option value="featured">Nossa seleção</option><option value="low">Menor preço</option><option value="high">Maior preço</option><option value="new">Novidades</option></select></label></div><div class="search-row"><label class="search-field"><span id="search-icon"></span><input id="search" type="search" placeholder="Busque uma obra, uma cor, um sentimento…" aria-label="Buscar obras"></label><button id="clear-filters" class="text-button" hidden>Limpar filtros ×</button></div><div id="active-context" aria-live="polite"></div><div class="product-grid" id="product-grid"></div><p class="demo-note">Prévia do catálogo • Preços e tamanhos ilustrativos.</p></section>
+  <section id="ambientes" class="environment-section">
+    <div class="environment-scene photo-scene"><img id="environment-photo" class="scene-photo" src="assets/rooms/quarto-costa.webp" width="1536" height="1024" loading="lazy" alt="Dupla Costa Serena sobre a cabeceira de um quarto com roupas de cama em linho claro"><span class="room-caption" id="room-caption">COSTA SERENA · UM LUGAR PARA DESACELERAR</span></div>
+    <div class="environment-copy"><p class="eyebrow">IMAGINE NO SEU ESPAÇO</p><h2>O seu canto.<br><em>Um novo olhar.</em></h2><p>Algumas obras parecem feitas para estar juntas. Explore as combinações e imagine a sua favorita em casa.</p>
+      <div class="scene-tabs" role="group" aria-label="Escolher ambientação"><button data-scene="quarto-costa" aria-pressed="true">No quarto</button><button data-scene="sala-jardim" aria-pressed="false">Na sala</button></div>
+      <button class="text-button underline" id="scene-product" data-product="110">Conheça a Dupla Costa Serena ↗</button>
+      <p class="scene-disclaimer">Ambientações ilustrativas criadas com IA.</p>
+      <div class="room-links"><button data-room="Sala">Quadros para sala <span>↗</span></button><button data-room="Quarto">Quadros para quarto <span>↗</span></button><button data-room="Escritório">Quadros para escritório <span>↗</span></button><button data-room="Hall">Quadros para hall <span>↗</span></button></div>
+    </div>
+  </section>
+  <section class="section guide"><div><p class="eyebrow">UM POUCO DE INSPIRAÇÃO</p><h2>O quadro certo.<br>No seu ritmo.</h2><button id="guide-open" class="text-button underline">Um guia para escolher ↗</button></div><article><span>01</span><h3>Comece pelo que sente.</h3><p>Escolha cores e formas que despertam algo em você. Seu espaço pode contar sua história.</p></article><article><span>02</span><h3>Olhe para as proporções.</h3><p>Meça a parede e o móvel abaixo dela. Simule o tamanho com papel antes de decidir.</p></article><article><span>03</span><h3>Crie suas combinações.</h3><p>Una obras com uma cor em comum ou deixe uma peça maior ser o centro das atenções.</p></article></section>
+  <section id="sobre" class="about"><span class="about-symbol">✳</span><p class="eyebrow">PRAZER, SOMOS A GALERIA LIVORE</p><h2>Acreditamos em casas com alma.<br>E em arte que faz parte da vida.</h2><p>A Livore nasce de um desejo simples: aproximar a arte do cotidiano.<br>Paisagens, flores e gestos de pintura para trazer mais presença aos seus espaços.</p><a href="#catalogo" class="text-button underline">Encontre algo que é seu ↗</a></section>
+</main>
+<footer><div class="footer-main"><div><a class="brand footer-brand" href="#"><span>GALERIA</span>livore.</a><p>Arte que faz a casa ser sua.</p></div><div><h3>Explore</h3><a href="#catalogo">Todos os quadros</a><a href="#colecoes">Coleções</a><a href="#ambientes">Por ambiente</a></div><div><h3>Podemos ajudar?</h3><button data-info="atendimento">Atendimento</button><button data-info="entrega">Entrega e devoluções</button><button data-info="privacidade">Privacidade</button></div><div class="footer-invitation"><span>UM NOVO OLHAR, TODOS OS DIAS.</span><p>Deixe a arte<br>entrar.</p></div></div><div class="footer-bottom"><span>© <span id="year"></span> Galeria Livore</span><span>Prévia da loja • Compras indisponíveis nesta demonstração</span><span>Feito para inspirar ↗</span></div></footer>
+<dialog id="product-dialog" class="product-dialog"><button class="close-button" data-close aria-label="Fechar produto">×</button><div id="product-content"></div></dialog>
+<dialog id="bag-dialog" class="bag-dialog"><div class="drawer-title"><h2>Sua sacola<span id="drawer-count"></span></h2><button class="close-button" data-close aria-label="Fechar sacola">×</button></div><div id="bag-content"></div></dialog>
+<dialog id="info-dialog" class="info-dialog"><button class="close-button" data-close aria-label="Fechar">×</button><div id="info-content"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</body></html>
